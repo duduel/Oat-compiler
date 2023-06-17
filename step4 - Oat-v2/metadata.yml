@@ -1,0 +1,12 @@
+---
+:id: 102239181
+:submitters:
+- :name: Eliel Dushime
+  :email: elieldushime@college.harvard.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-11-27 12:50:52.586165000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2021-11-27 04:50:52.586165000 Z
+:status: processed
+:score: 95.1

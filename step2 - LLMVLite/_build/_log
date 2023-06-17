@@ -1,0 +1,92 @@
+### Starting build.
+# Target: main.ml.depends, tags: { extension:ml, file:main.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules main.ml > main.ml.depends
+# Target: util/assert.mli.depends, tags: { extension:mli, file:util/assert.mli, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules util/assert.mli > util/assert.mli.depends
+# Target: driver.ml.depends, tags: { extension:ml, file:driver.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules driver.ml > driver.ml.depends
+# Target: backend.ml.depends, tags: { extension:ml, file:backend.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules backend.ml > backend.ml.depends
+# Target: ll/ll.ml.depends, tags: { extension:ml, file:ll/ll.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules ll/ll.ml > ll/ll.ml.depends
+# Target: util/platform.ml.depends, tags: { extension:ml, file:util/platform.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules util/platform.ml > util/platform.ml.depends
+# Target: x86/x86.ml.depends, tags: { extension:ml, file:x86/x86.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules x86/x86.ml > x86/x86.ml.depends
+# Target: ll/ll.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ll/ll.cmo, file:ll/ll.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I ll -I x86 -I util -o ll/ll.cmo ll/ll.ml
+# Target: util/platform.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:util/platform.cmo, file:util/platform.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I util -I x86 -I ll -o util/platform.cmo util/platform.ml
+# Target: x86/x86.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:x86/x86.cmo, file:x86/x86.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I x86 -I ll -I util -o x86/x86.cmo x86/x86.ml
+# Target: ll/llinterp.ml.depends, tags: { extension:ml, file:ll/llinterp.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules ll/llinterp.ml > ll/llinterp.ml.depends
+# Target: ll/llutil.ml.depends, tags: { extension:ml, file:ll/llutil.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules ll/llutil.ml > ll/llutil.ml.depends
+# Target: ll/llutil.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ll/llutil.cmo, file:ll/llutil.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I ll -I x86 -I util -o ll/llutil.cmo ll/llutil.ml
+# Target: ll/lllexer.mll, tags: { extension:mll, file:ll/lllexer.mll, lexer, ocaml, ocamllex, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamllex.opt -q ll/lllexer.mll
+# Target: ll/lllexer.ml.depends, tags: { extension:ml, file:ll/lllexer.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules ll/lllexer.ml > ll/lllexer.ml.depends
+# Target: ll/llparser.mly.depends, tags: { extension:mly, file:ll/llparser.mly, infer, menhir_ocamldep, ocaml, ocamldep, quiet, traverse }
+menhir --raw-depend --ocamldep '/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules' ll/llparser.mly > ll/llparser.mly.depends
+# Target: ll/llparser.mly, tags: { byte, compile, extension:ml, extension:mly, file:ll/llparser.ml, file:ll/llparser.mly, infer, menhir, ocaml, parser, quiet, traverse }
+menhir --ocamlc '/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -I ll -I x86 -I util' --infer ll/llparser.mly
+# Target: ll/llparser.mli.depends, tags: { extension:mli, file:ll/llparser.mli, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules ll/llparser.mli > ll/llparser.mli.depends
+# Target: ll/llparser.cmi, tags: { byte, compile, extension:mli, file:ll/llparser.mli, interf, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I ll -I x86 -I util -o ll/llparser.cmi ll/llparser.mli
+# Target: backend.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:backend.cmo, file:backend.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I x86 -I ll -I util -o backend.cmo backend.ml
+# Target: ll/llinterp.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ll/llinterp.cmo, file:ll/llinterp.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I ll -I x86 -I util -o ll/llinterp.cmo ll/llinterp.ml
+# Target: ll/lllexer.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ll/lllexer.cmo, file:ll/lllexer.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I ll -I x86 -I util -o ll/lllexer.cmo ll/lllexer.ml
+# Target: gradedtests.ml.depends, tags: { extension:ml, file:gradedtests.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules gradedtests.ml > gradedtests.ml.depends
+# Target: util/assert.cmi, tags: { byte, compile, extension:mli, file:util/assert.mli, interf, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I util -I x86 -I ll -o util/assert.cmi util/assert.mli
+# Target: driver.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:driver.cmo, file:driver.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I x86 -I ll -I util -o driver.cmo driver.ml
+# Target: studenttests.ml.depends, tags: { extension:ml, file:studenttests.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules studenttests.ml > studenttests.ml.depends
+# Target: gradedtests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:gradedtests.cmo, file:gradedtests.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I x86 -I ll -I util -o gradedtests.cmo gradedtests.ml
+# Target: studenttests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:studenttests.cmo, file:studenttests.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I x86 -I ll -I util -o studenttests.cmo studenttests.ml
+# Target: main.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlc.opt -c -I x86 -I ll -I util -o main.cmo main.ml
+# Target: util/assert.ml.depends, tags: { extension:ml, file:util/assert.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules util/assert.ml > util/assert.ml.depends
+# Target: ll/ll.cmx, tags: { compile, extension:cmx, extension:ml, file:ll/ll.cmx, file:ll/ll.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I ll -I x86 -I util -o ll/ll.cmx ll/ll.ml
+# Target: util/platform.cmx, tags: { compile, extension:cmx, extension:ml, file:util/platform.cmx, file:util/platform.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I util -I x86 -I ll -o util/platform.cmx util/platform.ml
+# Target: x86/x86.cmx, tags: { compile, extension:cmx, extension:ml, file:x86/x86.cmx, file:x86/x86.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I x86 -I ll -I util -o x86/x86.cmx x86/x86.ml
+# Target: ll/llutil.cmx, tags: { compile, extension:cmx, extension:ml, file:ll/llutil.cmx, file:ll/llutil.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I ll -I x86 -I util -o ll/llutil.cmx ll/llutil.ml
+# Target: ll/llparser.ml.depends, tags: { extension:ml, file:ll/llparser.ml, ocaml, ocamldep, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamldep.opt -modules ll/llparser.ml > ll/llparser.ml.depends
+# Target: ll/llparser.cmx, tags: { compile, extension:cmx, extension:ml, file:ll/llparser.cmx, file:ll/llparser.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I ll -I x86 -I util -o ll/llparser.cmx ll/llparser.ml
+# Target: backend.cmx, tags: { compile, extension:cmx, extension:ml, file:backend.cmx, file:backend.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I x86 -I ll -I util -o backend.cmx backend.ml
+# Target: ll/llinterp.cmx, tags: { compile, extension:cmx, extension:ml, file:ll/llinterp.cmx, file:ll/llinterp.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I ll -I x86 -I util -o ll/llinterp.cmx ll/llinterp.ml
+# Target: ll/lllexer.cmx, tags: { compile, extension:cmx, extension:ml, file:ll/lllexer.cmx, file:ll/lllexer.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I ll -I x86 -I util -o ll/lllexer.cmx ll/lllexer.ml
+# Target: util/assert.cmx, tags: { compile, extension:cmx, extension:ml, file:util/assert.cmx, file:util/assert.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I util -I x86 -I ll -o util/assert.cmx util/assert.ml
+# Target: driver.cmx, tags: { compile, extension:cmx, extension:ml, file:driver.cmx, file:driver.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I x86 -I ll -I util -o driver.cmx driver.ml
+# Target: gradedtests.cmx, tags: { compile, extension:cmx, extension:ml, file:gradedtests.cmx, file:gradedtests.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I x86 -I ll -I util -o gradedtests.cmx gradedtests.ml
+# Target: studenttests.cmx, tags: { compile, extension:cmx, extension:ml, file:studenttests.cmx, file:studenttests.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I x86 -I ll -I util -o studenttests.cmx studenttests.ml
+# Target: main.cmx, tags: { compile, extension:cmx, extension:ml, file:main.cmx, file:main.ml, implem, native, ocaml, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt -c -I x86 -I ll -I util -o main.cmx main.ml
+# Target: main.native, tags: { dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet, traverse }
+/Users/edushime/.opam/4.12.0/bin/ocamlopt.opt unix.cmxa str.cmxa nums.cmxa -I ll -I util -I x86 ll/ll.cmx util/platform.cmx x86/x86.cmx backend.cmx ll/llutil.cmx ll/llinterp.cmx ll/llparser.cmx ll/lllexer.cmx driver.cmx util/assert.cmx gradedtests.cmx studenttests.cmx main.cmx -o main.native
+# Compilation successful.

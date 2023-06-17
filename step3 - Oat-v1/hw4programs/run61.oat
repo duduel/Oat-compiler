@@ -1,0 +1,6 @@
+global s = "compilers";
+
+int program(int argc, string[] argv) {
+  print_string(s);
+  return 0;
+}
